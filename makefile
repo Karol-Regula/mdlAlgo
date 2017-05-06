@@ -40,6 +40,9 @@ gmath.o: gmath.c gmath.h matrix.h
 
 stack.o: stack.c stack.h matrix.h
 	$(CC) $(CFLAGS) -c stack.c 
+	
+run: all
+	./mdl script.mdl
 
 clean:
 	rm *.o
@@ -47,3 +50,4 @@ clean:
 	rm lex.yy.c
 	rm -rf mdl.dSYM
 	rm mdl
+	rm *.png
